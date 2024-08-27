@@ -8,29 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="container-1">
         <header class="header">
-            <div class="header-logo">
-                <img src="../assets/img/logo.svg" alt="Siman.com">
-              </div>
-              <div class="header-search">
-                <input type="text" placeholder="Buscar">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </div>
-              <div class="header-icons">
-                <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-              </div>       
-        </header>   
+            <nav class="header-nav">
+                <a href="#">Home</a>
+                <a href="departments.html">Departamentos</a>
+                <a href="promo.html">Promociones</a>
+                <a href="#"><i class="fa-regular fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
+
+            <img class="header-logo" alt="Siman logotipo" crossorigin="anonymous"
+                data-src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/cfd36ba9-4b77-4f49-84c3-9e2f9c363cc8___19999b42961a45dbb2f4293973939c0b.svg"
+                loading="lazy"
+                src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/cfd36ba9-4b77-4f49-84c3-9e2f9c363cc8___19999b42961a45dbb2f4293973939c0b.svg">
+
+
+            <section class="header__search">
+                <input type="text" placeholder="Buscar un producto">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </section>
+
+        </header>
     </div>
     <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
 </html>
