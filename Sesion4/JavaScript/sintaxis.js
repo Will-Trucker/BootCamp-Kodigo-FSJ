@@ -76,3 +76,20 @@ let ejecucion1 = tiposVoid();
 let ejecucion2 = tipoReturn();
 console.log(ejecucion1);
 console.log(ejecucion2);
+
+/* 
+CONSTANTE nombreFuncion asignamos parametros flecha llaves CODIGO A EJECUTAR
+const funcionFlecha = () => { log() }
+*/
+
+const funcionFlecha = (num1, num2) => {
+    return num1 - num2;
+}
+
+function funcionCallback(funcion){
+    funcion();
+}
+
+function funcionAuxiliar(){
+    
+}
