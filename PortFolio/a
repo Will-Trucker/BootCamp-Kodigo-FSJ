@@ -1,0 +1,140 @@
+    <!-- <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <section class="logo">
+                    <h2>J<span>V</span>R</h2>
+                </section>
+                <ul class="menu-navbar">
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-content">
+            <section class="bio">
+                <h1>I'm Will Orellana</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates nemo sit quas dolores quaerat doloribus! Libero non error itaque voluptatum?</p>
+                <a href="#"><button class="btn btn-outline-success">Descargar CV</button></a>
+            </section>
+            <section class="img-container">
+                <img src="./Assets/img/83888568.png" alt="picture personal de Jairo Vega Romero">
+            </section>
+        </main>
+        <section class="projects-container m-5">
+            <section class="projects-header m-3">
+                <h2 class="text-center">My Projects</h2>
+            </section>
+            <section class="projects-box">
+                <div class="row grid gap-3 d-flex justify-content-center">
+
+                <article class="card col-3">
+                    <section >
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1qEQJoZ1ByRsXVfXVA5nGoDaK50gkCnn8Q&s" alt="picture of the project">
+                    </section>
+                    <section class="card-body">
+                    <section class="card-title">
+                        <h1>Hola Mundo</h1>
+                    </section>
+                    <section class="card-links">
+                        <a href="#">Github</a>
+                        <a href="#">Demo</a>
+                    </section>
+                </section>
+                </article>
+                Agregar una card por proyecto
+                <article class="card col-3">
+                    <section >
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1qEQJoZ1ByRsXVfXVA5nGoDaK50gkCnn8Q&s" alt="picture of the project" srcset="">
+                    </section>
+                    <section class="card-body">
+                    <section class="card-title">
+                        <h1>Hola Mundo</h1>
+                    </section>
+                    <section class="card-links">
+                        <a href="#">Github</a>
+                        <a href="#">Demo</a>
+                    </section>
+                </section>
+                </article>
+                <article class="card col-3">
+                    <section >
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1qEQJoZ1ByRsXVfXVA5nGoDaK50gkCnn8Q&s" alt="picture of the project" srcset="">
+                    </section>
+                    <section class="card-body">
+                    <section class="card-title">
+                        <h1>Hola Mundo</h1>
+                    </section>
+                    <section class="card-links">
+                        <a href="#">Github</a>
+                        <a href="#">Demo</a>
+                    </section>
+                </section>
+                </article>
+            </div>
+            </section>
+        </section>
+        <section class="contact-form">
+            <form action="#" class="card">
+                <input type="text" name="name" placeholder="Escriba su nombre">
+                <input type="email" name="email" placeholder="Escriba su correo">
+                <textarea name="message" placeholder="Escriba su mensaje aqui"></textarea>
+                <a href="#" class="btn btn-primary m3">Send</a>
+            </form>
+        </section>
+        <footer class="footer-section">
+            <section class="footer-content">
+                <h2>Pepito Fuentes Copyright since 2024</h2>
+                <h5>Frontend Developer</h5>
+            </section>
+            <section class="social-networks">
+                <a href="">LinkedIn</a>
+                <a href="">GitHub</a>
+                <a href="">YouTube</a>
+            </section>
+        </footer>
+    </div> -->
+         <!-- <a href="#"><button class="btn btn-outline-success">Descargar CV</button></a> -->
+
+         /* body{
+            background-color: #23325a !important;
+            color: #fff !important;
+            font-family: "Ubuntu", sans-serif !important;
+            font-weight: 500 !important;
+            font-style: normal !important;
+        } */
+        /* 
+        /** Header Section  
+        .header .navbar .logo h2{
+            font-size: 2.5em !important;
+        }
+        
+        .header .navbar .logo h2 span{
+            color: rgb(10,165,165) !important;
+            text-shadow: 1px 1px 3px white;
+        }
+        
+        .header .navbar .menu-navbar{
+            width: 40vw;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        .header .navbar .menu-navbar a{
+            text-decoration: none;
+            color: white;
+        }
+        
+        /* ---- Main Section ---- 
+        .main-content{ 
+            display: grid;
+            grid-template-columns: 4fr 4fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .main-content .img-container img{
+            width: 30vw;
+        } */
+        
