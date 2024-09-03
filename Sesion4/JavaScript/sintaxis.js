@@ -91,5 +91,15 @@ function funcionCallback(funcion){
 }
 
 function funcionAuxiliar(){
-    
+    console.log("Estoy funcionando desde el callback");
 }
+
+funcionCallback(funcionAuxiliar);
+
+//Callback con funcionFlecha ANONIMA
+funcionCallback( () => { console.log("Te saludo desde la funcion flecha anonima jeje saludos");
+});
+
+funcionCallback(function () { console.log(
+    "Holiwis desde la funcion anonima expresada");
+})
