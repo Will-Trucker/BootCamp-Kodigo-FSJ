@@ -103,3 +103,25 @@ funcionCallback( () => { console.log("Te saludo desde la funcion flecha anonima 
 funcionCallback(function () { console.log(
     "Holiwis desde la funcion anonima expresada");
 })
+
+function numParesArray(arr){
+    let i = 0;
+    let arrayAux = [];
+
+    if(arr.length == 0){
+        return arr;
+    }
+
+    while(i < arr.length){
+       if(arr[i] % 2 == 0){
+        console.log(arr[i]);
+        arrayAux.push(arr[i]);
+       }
+       i++;
+    }
+    return arrayAux;
+}
+
+let arraycito = [1,2,3,4,5,7,8];
+console.log(numParesArray(arraycito));
+
