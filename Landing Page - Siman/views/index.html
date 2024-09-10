@@ -375,43 +375,30 @@
                     </div>
                 </div>
             </section>
-            <script>
-                /*Initialize Swiper*/
-                var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                    autoplay: {
-                        delay: 6000,
-                        disableOnInteraction: false,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    breakpoints: {
-                        360: {
-                            slidesPerView: 1.5,
-                            spaceBetween: 20,
-                        },
-                        540: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        1200: {
-                            slidesPerView: 4,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 20,
-                        },
-                    },
-                });
-            </script>
+            <!-- Best Styles  -->
+             <section class="best-styles">
+                <h1>The Best Fashion!</h1>
+                <section class="best-style__cont">
+                    <article class="style-box">
+                        <section class="style-box__img">
+                            <img src="https://th.bing.com/th/id/OIP.e8FisXbva6nT8VZYUbivegAAAA?rs=1&pid=ImgDetMain" alt="">
+                        </section>
+                        <p>Casual</p>
+                    </article>
+                    <article class="style-box">
+                        <section class="style-box__img">
+                            <img src="https://th.bing.com/th/id/R.9e7c14c401aac35b622f6dd0a8073b12?rik=BVl98eztaywWCg&pid=ImgRaw&r=0" alt="">
+                        </section>
+                        <p>Formal</p>
+                    </article>
+                    <article class="style-box">
+                        <section class="style-box__img">
+                            <img src="https://th.bing.com/th/id/R.c14cf4a6136ea2ae0a8e38b857a9a0b3?rik=eJnXRzn%2fDThJ6w&pid=ImgRaw&r=0" alt="">
+                        </section>
+                        <p>Fit</p>
+                    </article>
+                </section>
+             </section>
         </main>
 
         <footer>
@@ -421,5 +408,40 @@
     <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/slider.js"></script>
-
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                360: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                },
+                540: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
 </html>

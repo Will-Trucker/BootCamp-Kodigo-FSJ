@@ -750,7 +750,7 @@ a {
   }
 }
 
-/*===Product-slider=================================*/
+/* Carrousel */
 .product-slider {
   display: flex;
   justify-content: center;
@@ -833,11 +833,9 @@ a {
   transition: none !important;
   animation: none;
   z-index: 100;
-  font-family: "Open Sans", sans-serif;
 }
 .product-box-text {
   margin-top: 5px;
-  font-family: "Open Sans", sans-serif;
 }
 .product-title {
   color: #333333;
@@ -935,5 +933,71 @@ a {
   .product-box-offer {
     top: 10px;
     left: 20px;
+  }
+}
+
+.best-styles {
+  margin: 6rem 0 3rem;
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.best-style__cont {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si es necesario */
+  gap: 2rem; /* Espacio entre las tarjetas */
+}
+
+.style-box {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  max-width: 300px; /* Limita el ancho máximo de las tarjetas */
+  flex: 1 1 300px; /* Cada tarjeta ocupa hasta 300px de ancho, pero se ajustará si hay espacio */
+}
+
+.style-box:hover {
+  background-color: #e0e0e0;
+}
+
+.style-box__img {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.style-box__img img {
+  width: 250px; /* Ancho fijo para las imágenes */
+  height: 400px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que las imágenes se escalen correctamente sin deformarse */
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+  border-radius: 12px;
+}
+
+.style-box__img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.style-box p{
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+  .best-style__cont {
+    justify-content: center; /* Mantiene los elementos centrados en pantallas más grandes */
+    gap: 1.5rem; /* Espacio entre tarjetas en pantallas grandes */
+  }
+
+  .style-box {
+    max-width: 30%; /* Ajusta 3 tarjetas por fila en pantallas grandes */
   }
 }
