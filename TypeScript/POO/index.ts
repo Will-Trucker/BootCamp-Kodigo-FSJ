@@ -12,5 +12,9 @@ class Auto{
     transmision:string;
     cantKilimetro:string;
     plazas:number;
+    frenos:number;
+    modelo:number;
+    añoFab:number;
+    
 
 }
