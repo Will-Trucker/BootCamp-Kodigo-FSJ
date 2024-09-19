@@ -1240,3 +1240,31 @@ footer .bottom-details .bottom_text{
     width: 100%;
   }
 }
+
+/* Media Queries para pantallas más pequeñas */
+
+/* Adaptación para pantallas entre 597px y 768px */
+@media (max-width: 768px) and (min-width: 600px) {
+  .departamento__container {
+      grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas */
+  }
+}
+
+
+/* Para pantallas entre 522px y 596px */
+@media (max-width:600px) and (min-width: 522px) {
+  .departamento__container {
+      grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas más pequeñas */
+      gap: 15px; /* Reducir el espacio entre tarjetas */
+  }
+  .departamento__container {
+      width: 100%; /* Ajustar las tarjetas al 100% del espacio disponible */
+  }
+}
+
+/* Para pantallas menores a 522px */
+@media (max-width: 522px) {
+  .departamento__container {
+      grid-template-columns: repeat(2, 1fr) /* Una columna para pantallas pequeñas */
+  }
+}

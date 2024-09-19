@@ -1,0 +1,95 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body{
+    overflow-x: hidden !important; /* Evitar el scroll horizontal */
+}
+
+.departamento{
+    margin-top: 6rem !important;
+}
+
+.departamento h1{
+    text-align: center !important;
+    font-size: 3rem;
+}
+
+.departamento__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para las tarjetas */
+.departamento__card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.departamento__card:hover {
+    transform: translateY(-10px);
+}
+
+.departamento__card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.departamento__card:hover img {
+    transform: scale(1.1);
+}
+
+.departamento__card-content {
+    padding: 15px;
+}
+
+.departamento__card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.departamento__card-content p {
+    color: #555;
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+/* Adaptación para pantallas entre 597px y 768px */
+@media (max-width: 768px) and (min-width: 600px) {
+    .departamento__container {
+        grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas */
+    }
+}
+
+
+/* Para pantallas entre 522px y 596px */
+@media (max-width:600px) and (min-width: 522px) {
+    .departamento__container {
+        grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas más pequeñas */
+        gap: 15px; /* Reducir el espacio entre tarjetas */
+    }
+    .departamento__container {
+        width: 100%; /* Ajustar las tarjetas al 100% del espacio disponible */
+    }
+}
+
+/* Para pantallas menores a 522px */
+@media (max-width: 522px) {
+    .departamento__container {
+        grid-template-columns: repeat(2, 1fr) /* Una columna para pantallas pequeñas */
+    }
+}

@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almacenes SIMAN | Departamentos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css"> <!-- Solamente para nav y footer-->
+    <link rel="stylesheet" href="../assets/css/departments.css" type="text/css"> <!-- StyleSheet para Departamentos -->
 </head>
 </head>
 <body>
@@ -18,7 +20,7 @@
                 <div class="row v-center">
                     <div class="header-item item-left">
                         <div class="logo">
-                            <a href="#">
+                            <a href="index.html">
                                 <img class="header-logo" alt="Siman logotipo" crossorigin="anonymous"
                                     data-src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/cfd36ba9-4b77-4f49-84c3-9e2f9c363cc8___19999b42961a45dbb2f4293973939c0b.svg"
                                     loading="lazy"
@@ -38,7 +40,7 @@
                             </div>
                             <ul class="menu-main">
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a href="index.html">Home</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Departamentos <i class="fa fa-angle-down"></i></a>
@@ -98,7 +100,7 @@
                                     <a href="#">More <i class="fas fa-angle-down"></i></a>
                                     <div class="sub-menu single-column-menu">
                                         <ul>
-                                            <li><a href="#">Promociones</a></li>
+                                            <li><a href="most-sales.html">Promociones</a></li>
                                             <li><a href="https://www.credisiman.com/landing/SV">CrediSiman</a></li>
                                             <li><a href="#">Login</a></li>
                                             <li><a href="#">Registrarme</a></li>
@@ -123,6 +125,50 @@
                 </div>
             </div>
         </header>
+        <main class="main">
+            <section class="departamento">
+                <h1 class="departamento__title1">Departamentos</h1>
+                <div class="departamento__container">
+                    <div class="departamento__card">
+                        <img src="../assets/img/departments/calzado.png" alt="Imagen 2">
+                        <div class="departamento__card-content">
+                            <h3>Calzado</h3>
+                            <p>Cualquier Estilo</p>
+                        </div>
+                    </div>
+                    <div class="departamento__card">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/030/784/161/small/beautiful-asian-girls-short-hair-in-casual-outfit-ai-generative-photo.jpg" alt="Imagen 3">
+                        <div class="departamento__card-content">
+                            <h3>Ellas</h3>
+                            <p>Cualquier Estilo</p>
+                        </div>
+                    </div>
+                    <div class="departamento__card">
+                        <img src="https://media.istockphoto.com/id/651244620/photo/sitting-on-the-dock-of-the-bay.jpg?s=612x612&w=0&k=20&c=KtBSQ1iNnRB3OaTM2osBKzGbrhMWf6ZXdWEpjXnDo6o=" alt="Imagen 4">
+                        <div class="departamento__card-content">
+                            <h3>Ellos</h3>
+                            <p>Cualquier Estilo</p>
+                        </div>
+                    </div>
+                    <div class="departamento__card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo7WLL3ycFHKPz6J5UzqWRc-6y6omyQjhchg&s" alt="Imagen 5">
+                        <div class="departamento__card-content">
+                            <h3>Hogar</h3>
+                            <p>Lo mejor para tu casa</p>
+                        </div>
+                    </div>
+                    <div class="departamento__card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg7xIAwhaD9io_ekRgp0mt5l21s9I8il4oWw&s" alt="Imagen 5">
+                        <div class="departamento__card-content">
+                            <h3>Tecnologia</h3>
+                            <p>Tech</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </section>
+        </main>
         <section class="footer">
             <footer>
                 <div class="content">
@@ -185,5 +231,43 @@
                 </div>
             </footer>
         </section>
+        <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                360: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                },
+                540: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
 </body>
 </html>

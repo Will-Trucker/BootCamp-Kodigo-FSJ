@@ -4,8 +4,309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almacenes SIMAN | Lo más vendido</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> <!-- solo para nav y footer -->
+    <link rel="stylesheet" href="../assets/css/most-sales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css"> -->
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <div class="container-1">
+        <header class="header">
+            <div class="container">
+                <div class="row v-center">
+                    <div class="header-item item-left">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="header-logo" alt="Siman logotipo" crossorigin="anonymous"
+                                    data-src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/cfd36ba9-4b77-4f49-84c3-9e2f9c363cc8___19999b42961a45dbb2f4293973939c0b.svg"
+                                    loading="lazy"
+                                    src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/cfd36ba9-4b77-4f49-84c3-9e2f9c363cc8___19999b42961a45dbb2f4293973939c0b.svg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-item item-center">
+                        <div class="menu-overlay">
+                        </div>
+                        <nav class="menu">
+                            <div class="mobile-menu-head">
+                                <div class="go-back"><i class="fa fa-angle-left" style="color: black !important;"></i>
+                                </div>
+                                <div class="current-menu-title"></div>
+                                <div class="mobile-menu-close">&times;</div>
+                            </div>
+                            <ul class="menu-main">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="departments.html">Departamentos <i class="fa fa-angle-down"></i></a>
+                                    <div class="sub-menu mega-menu mega-menu-column-4">
+                                        <div class="list-item">
+                                            <h4 class="title">Calzado</h4>
+                                            <ul>
+                                                <li><a href="#">For Girls</a></li>
+                                                <li><a href="#">For Mens</a></li>
+                                                <li><a href="#">Kids</a></li>
+                                                <li><a href="#">Accesorios</a></li>
+                                                <li><a href="#">Cuidado</a></li>
+                                            </ul>
+                                            <h4 class="title">Tecnologia</h4>
+                                            <ul>
+                                                <li><a href="#">Laptops y Computadoras</a></li>
+                                                <li><a href="#">Video y Audio</a></li>
+                                                <li><a href="#">Gaming</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="list-item">
+                                            <h4 class="title">Ellas</h4>
+                                            <ul>
+                                                <li><a href="#">Juvenil o Casual</a></li>
+                                                <li><a href="#">Curvy</a></li>
+                                                <li><a href="#">Ropa Interior y Pijamas</a></li>
+                                                <li><a href="#">Vestidos, Blusas y Más!!</a></li>
+                                            </ul>
+                                            <h4 class="title">Ellos</h4>
+                                            <ul>
+                                                <li><a href="#">Juvenil y KIDS!!</a></li>
+                                                <li><a href="#">Jeans, Shorts y Más!!</a></li>
+                                                <li><a href="#">Ropa Interior y Pijamas</a></li>
+                                                <li><a href="#">Trajes, Blazers, Suits y Más!!</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="list-item">
+                                            <h4 class="title">Home</h4>
+                                            <ul>
+                                                <li><a href="#">Linea Blanca y Electrodomesticos</a></li>
+                                                <li><a href="#">Muebles y Cristaleria</a></li>
+                                                <li><a href="#">Dormitorio</a></li>
+                                                <li><a href="#">Utensilios y Accesorios</a></li>
+                                                <li><a href="#">Decoracion</a></li>
+                                                <li><a href="#">Baño</a></li>
+                                                <li><a href="#">Organizadores</a></li>
+                                                <li><a href="#">Articulos de Limpieza</a></li>
+                                                <li><a href="#">Jardin</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="list-item">
+                                            <img src="../assets/img/shop1.jpg" alt="shop">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">More <i class="fas fa-angle-down"></i></a>
+                                    <div class="sub-menu single-column-menu">
+                                        <ul>
+                                            <li><a href="most-sales.html">Promociones</a></li>
+                                            <li><a href="https://www.credisiman.com/landing/SV">CrediSiman</a></li>
+                                            <li><a href="#">Login</a></li>
+                                            <li><a href="#">Registrarme</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Contact Us!!</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Menu Mobile -->
+                    <div class="header-item item-right">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="mobile-menu-trigger">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <br><br><br>
+        <main class="main">
+            <section class="products">
+                <h2>Most Sales Products</h2>
+                <div class="all-products">
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/2544857-1200-auto?v=637776002896530000&width=1200&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Iphone 13
+                            </h4>
+                            <p class="product-price">$800</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/4779038-800-auto?v=638324859274900000&width=800&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Iphone 15
+                            </h4>
+                            <p class="product-price">$1500</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/4410520-1200-auto?v=638237401961730000&width=1200&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Apple TV 4K Wifi 
+                            </h4>
+                            <p class="product-price">$150</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/2758617-1600-auto?v=637843653236770000&width=1600&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">JBL Flip 6
+                                </h4>
+                            <p class="product-price">$149</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/4623484-1600-auto?v=638290360821370000&width=1600&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Nintendo Switch 32GB ROM Rojo/Azul
+                                </h4>
+                            <p class="product-price">$349</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/6026562-1600-auto?v=638592427718600000&width=1600&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Samsung Cristal LED smart 50" UHD/4K
+                                </h4>
+                            <p class="product-price">$539</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/2947065-1600-auto?v=637895491046770000&width=1600&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Zapato casual Vans
+                                </h4>
+                            <p class="product-price">$86</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/5426206-1600-auto?v=638490775690300000&width=1600&height=auto&aspect=true">
+                        <div class="product-info">
+                            <h4 class="product-title">Zapato Nike SB Chron 2 deportivo casual
+                                </h4>
+                            <p class="product-price">$107</p>
+                            <a class="product-btn" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="footer">
+            <footer>
+                <div class="content">
+                    <div class="top">
+                        <div class="logo-details">
+                            <img src="../assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="link-boxes">
+                        <ul class="box">
+                            <li class="link_name">Siman Corporativo</li>
+                            <li><a href="#">¿Quienes Somos?</a></li>
+                            <li><a href="#">Vision y Mision</a></li>
+                            <li><a href="#">Historia</a></li>
+                            <li><a href="#">Sucursales</a></li>
+                        </ul>
+                        <ul class="box">
+                            <li class="link_name">Programas</li>
+                            <li><a href="#">Monedero</a></li>
+                            <li><a href="#">Certificados</a></li>
+                            <li><a href="#">Credisiman</a></li>
+                            <li><a href="#">Garantias</a></li>
+                        </ul>
+                        <ul class="box">
+                            <li class="link_name">Soporte</li>
+                            <li><a href="#">FAQS</a></li>
+                            <li><a href="#">Póliticas</a></li>
+                            <li><a href="#">Contáctanos</a></li>
+                            <li><a href="#">Seguridad del Sitio</a></li>
+                        </ul>
+                        <ul class="box">
+                            <li class="link_name">Ofertas</li>
+                            <li><a href="#">Condiciones</a></li>
+                            <li><a href="#">Derechos</a></li>
+                            <li><a href="#">Terminos</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                        </ul>
+                        <ul class="box input-box">
+                            <li class="link_name">Subscribete</li>
+                            <li><input type="text" placeholder="Digite tu e-mail"></li>
+                            <li><input type="button" value="Subscribete"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-details">
+                    <div class="bottom_text">
+                        <span class="copyright_text">Copyright &copy; 2024 <a href="#">Almacenes Siman El Salvador</a>| Derechos Reservados</span>
+                        <span class="policy_terms">
+                            <a href="#">Politicas de privacidad</a>
+                            <a href="#">Terminos & condiciones</a>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                360: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                },
+                540: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
 </body>
 </html>
