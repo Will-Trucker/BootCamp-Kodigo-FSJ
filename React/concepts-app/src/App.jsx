@@ -12,7 +12,7 @@ function App() {
 
       { /* Llama al componente */}
       <Saludo/>
-      <Saludito/>
+      
 
     </> /* Fragment */
   )
