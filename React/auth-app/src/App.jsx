@@ -1,24 +1,23 @@
 import './assets/css/App.css'
+import { MyProvider } from './context/UserDataContext'
+import  {Home}  from './pages/home/Home'
 import {Session} from './pages/sessions/Session'
-import {BrowserRouter} from 'react-router-dom';
-import { Route } from 'react-router-dom';
-import { Routes } from 'react-router-dom';
-import { Home } from './pages/home/Home';
-import { MyProvider } from './context/UserDataContext';
+import {BrowserRouter,Route,Routes } from 'react-router-dom'
+
 function App() {
 
   return (
     <>
     <MyProvider>
-    {/* BrowserRouter activamos ReactRouterDom en la APP */}
-        <BrowserRouter>
-        {/* Activamos la funcionalidad de poder empezar a crear rutas en */}
-          <Routes>
-              <Route index path="/" element={<Home/>}/>
-              <Route path="/session" element={<Session/>}/>
-          </Routes>
-        </BrowserRouter>
-     </MyProvider>
+    {/* BrowserRouter activamos ReactRouterDOM en la app */}
+      <BrowserRouter>
+    {/* Activamos la funcionalidad de poder empezar a crear RUTAS en */}
+            <Routes>
+            <Route index path='/' element={ <Home />} />
+            <Route path='/session' element={ <Session />} />
+            </Routes>
+      </BrowserRouter>
+  </MyProvider>
     </>
   )
 }
