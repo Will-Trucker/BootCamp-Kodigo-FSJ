@@ -11,7 +11,7 @@ function App() {
      
       <BrowserRouter>
         <Routes>
-          {/* Propiedad correcta es "element", no "elements" */}
+
           <Route path="/" element={<Login />} />
           <Route path="/products" element={
             <ProtectedRoute>

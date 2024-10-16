@@ -1,6 +1,6 @@
 import { addDoc, collection, doc, getDocs, updateDoc, deleteDoc } from 'firebase/firestore';
 import { useForm } from 'react-hook-form';
-import { db, auth } from '../../firebase/config';  // Asegúrate de importar auth
+import { db, auth } from '../../firebase/config';
 import { useEffect, useState } from 'react';
 import '../../../src/style.css';
 import { signOut } from 'firebase/auth';
@@ -10,7 +10,7 @@ export const Products = () => {
     const { register, handleSubmit, reset, setValue } = useForm();
     const [products, setProducts] = useState([]);
     const [editId, setEditId] = useState(null);
-    const navigate = useNavigate();  // Asegúrate de inicializar useNavigate
+    const navigate = useNavigate(); 
 
     const getProducts = async () => {
         const productsCollection = await getDocs(collection(db, 'products'));

@@ -18,8 +18,8 @@ export const ProtectedRoute = ({ children }) => {
   if (loading) return <p>Cargando...</p>; // Mostrar un mensaje mientras se verifica el estado del usuario
 
   if (!user) {
-    return <Navigate to="/" />; // Redirige al login si no hay usuario autenticado
+    return <Navigate to="/" />; 
   }
 
-  return children; // Si está autenticado, muestra el contenido
+  return children;
 };
