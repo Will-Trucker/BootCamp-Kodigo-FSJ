@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <h1>Crud Basico FireStore</h1>
-     
+      
       <BrowserRouter>
         <Routes>
 
