@@ -28,7 +28,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+    <div className="rounded-lg px-6 py-8">
 
           <form onSubmit={handleSubmit(submitHandler)} className="max-w-md mx-auto p-6 bg-gray-900 rounded-lg shadow-lg loginForm dark:bg-gray-800">
     {/* <form onSubmit={handleSubmit(submitHandler)} className="max-w-md mx-auto p-6 bg-gray-900 rounded-lg shadow-lg"> */}
@@ -67,6 +67,10 @@ const LoginForm = () => {
       >
         {loading ? 'Cargando...' : 'Login'}
       </button>
+      <br /><br />
+      <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                      ¿Aún no tienes una cuenta? | <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Registrate!</a>
+                  </p>
     </form>
     </div>
   );

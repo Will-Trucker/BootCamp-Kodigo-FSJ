@@ -55,6 +55,8 @@ const MusicPlayer = ({ songList }) => {
 
   return (
     <>
+
+    
     <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-white">
 
       <h2 className="text-2xl font-bold text-center mb-4">{currentSong.name}</h2>
