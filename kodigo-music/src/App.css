@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 #root {
   max-width: 1280px;
@@ -11,6 +15,10 @@
 
 html{
   background-color: #1b1f22;
+  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
 }
 
 .logo {
@@ -51,6 +59,15 @@ html{
 
 
 .loginForm{
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
+.player{
+  margin-top:2rem
+}
+
+@media (max-width:768px) {
+  .player{
+    margin-top: 4rem;
+  }
+}

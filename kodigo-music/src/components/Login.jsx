@@ -68,8 +68,8 @@ const LoginForm = () => {
         {loading ? 'Cargando...' : 'Login'}
       </button>
       <br /><br />
-      <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      ¿Aún no tienes una cuenta? | <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Registrate!</a>
+      <p className="text-sm font-light text-white dark:text-gray-400">
+                      ¿Aún no tienes una cuenta? | <a href="/register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Registrate!</a>
                   </p>
     </form>
     </div>
