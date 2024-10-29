@@ -27,5 +27,31 @@ $multiplicacion = $numero * $decimal;
 $division = $numero / $decimal;
 $residuo = $numero % $decimal;
 
+// Operadores Comparacion
+$igualdad;
+
+// FUNCIONES
+// FUNCIONES EXPRESADAS
+function Saludar(){
+    print("Holiwis \n");
+}
+
+function Despedir(){
+    return("Chauchis \n");
+}
+
+$resultado = Saludar();
+$resulta2 = Despedir();
+print("Este es el resultado: {$resultado} \n");
+
+
+// FUNCIONES ANONIMAS
+$funcioncita = function(){print("Soy anonima jeje");};
+
+// FUNCIONES FLECHA
+$flechita = fn() => (print("Soy una funcion anonima flechita jejejiji"));
+
+
+
 ?>
 
