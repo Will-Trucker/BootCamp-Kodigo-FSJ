@@ -1,20 +1,23 @@
 <?php 
-    // Estructuras repetitivas
+    //Estructuras repetitivas
     //FOR
+
     for($i = 0; $i < 5; $i++){
         print("El valor de I es: {$i} \n");
     }
 
-    // WHILE
+    //WHILE
     $contador = 1;
     while($contador < 5){
-        print("El valor de CONTADOR es {$contador} \n");
+        print("El valor de CONTADOR es: {$contador} \n");
         $contador++;
     }
 
-    // DO WHILE
-    do {
-        print("El valor de CONTADOR es {$contador} \n");
+    //Do While
+
+    do{
+        print("El valor de CONTADOR es: {$contador} \n");
         $contador++;
-    } while ($contador < 5)
+    }  while($contador < 5)
+
 ?>
