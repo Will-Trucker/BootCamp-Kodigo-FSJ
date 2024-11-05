@@ -1,57 +1,81 @@
+
 <?php
-// Imprimir datos
-echo "Hola mundo \n";
-print "Holiwis desde print \n";
+    //Comentario de una linea
+    /* Comentario
+    Multilinea
+    */
 
-// Variables
-// Inicializar una variable
-$nombre;
-$nombre = "Jairo";
-$apellido = "Vega Romero";
-$string = "Cadena de texto";
-$boolean = true;
-$numero = 10;
-$decimal = 7.5;
+    //Imprimir datos
+    echo "Holiwis llegamos a PHP \n";
+    print "Holiwis desde print \n";
 
-// Template String
-$template = "${nombre} ${apellido}";
-print($template);
+    //Variables
+    //Inicializar una variable
+    $nombre;
+    $nombre = "Jairo ";
 
+    $apellido = "Vega Romero";
 
-
-
-// Operador Matematico
-$suma = $numero + $decimal;
-$resta = $numero - $decimal;
-$multiplicacion = $numero * $decimal;
-$division = $numero / $decimal;
-$residuo = $numero % $decimal;
-
-// Operadores Comparacion
-$igualdad;
-
-// FUNCIONES
-// FUNCIONES EXPRESADAS
-function Saludar(){
-    print("Holiwis \n");
-}
-
-function Despedir(){
-    return("Chauchis \n");
-}
-
-$resultado = Saludar();
-$resulta2 = Despedir();
-print("Este es el resultado: {$resultado} \n");
+    $string = 'Cadena de texto';
+    $boolean = true;
+    $numero = 10;
+    $decimal = 7.5;
+    
+    //Template String
+    //$template = `${nombre} ${apellido} `;
+    $template = "{$nombre} {$apellido}";
+    print($template);
 
 
-// FUNCIONES ANONIMAS
-$funcioncita = function(){print("Soy anonima jeje");};
+    //Operadores 
+    // Operador de concatenacion
+    print($nombre.$apellido."\n");
 
-// FUNCIONES FLECHA
-$flechita = fn() => (print("Soy una funcion anonima flechita jejejiji"));
+    // Operador matematico
+    $suma = $numero + $decimal;
+    $resta = $numero - $decimal;
+    $multiplicacion = $numero * $decimal;
+    $division = $numero / $decimal;
+    $residuo = $numero % $decimal;
 
+    //Operadores Comparacion
+    $igualdad = 5 == "5";
+    $igualdadEstricta = 5 === "5";
+    $desigualdad = 5 != "5";
+    $desigualdadEstricta = 5 !== "5";
 
+    $mayorQue = 5 > 5;
+    $menorQue = 5 < 5;
+    $mayorIgual = 5 >= 5;
+    $menorIgual = 5 <= 5;
 
+    //Operadores Logicos
+    // AND &&
+    // OR ||
+
+    //Funciones 
+    //Funciones Expresadas
+    function Saludar(){
+        print("Holiwis \n");
+    }
+
+    function Despedir(){
+        return "Chauchis \n";
+    }
+
+    $resultado = Saludar();
+    $resulta2 = Despedir();
+    print("Este es el resultado: {$resulta2} \n");
+
+    //Funciones anonimas
+    $funcioncita = function() { print("Soy anonima jeje");};
+
+    //Funciones flecha
+    $flechita = fn() => ( print("Soy una funcion anonima flechita jejejiji"));
+
+    //Llamado a funciones
+    $funcioncita();
+    $flechita();
+    Saludar();
+    Despedir();
 ?>
-
