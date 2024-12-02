@@ -37,6 +37,35 @@
             }
         }
     }
+
+    // Actulizar Aerolinea
+    if(isset($_POST['updateForm'])){
+        foreach($aerolineas as $aerolinea){
+            if($aerolinea->getId() == $_POST['id']){
+                print_r($aerolinea);
+                $aerolinea->setNombre($_POST['nombre']);
+                $aerolinea->setCant_aviones($_POST['cantAviones']);
+                $aerolinea->setTipo_aerolinea($_POST['tipoAerolinea']);
+            }
+        }
+        
+        header('Location: ./BootCamp-Kodigo-FSJ/php/aerolinea_project/');
+    }
+
+    // Eliminar
+    if(isset($_GET['delete'])){
+        $id = $_GET['delete'];
+
+        foreach($aerolineas as $key => $aerolinea){
+            if($aerolinea->getId() == $id){
+                unset($aerolineas[$key]);
+                break;
+            }
+            
+        }
+        $_SESSION['aerolineas'] = $aerolineas;
+        header('Location: ./BootCamp-Kodigo-FSJ/php/aerolinea_project/');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -46,15 +75,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Aerolinea</title>
 </head>
-<body>
+<body style="background-color: grey;">
     <h1>Holiwis</h1>
-    <?php 
-        if(isset($_GET['edit'])){
-            $aerolineaEdit = getAirline($_GET['edit'],$aerolineas);
-            print_r($aerolineaEdit);
-        }
+
+    <?php if(isset($_GET['edit'])){
+        $aerolineaEditable = getAerolineaPorID($_GET['edit'],$aerolineas);
+        //print_r($aerolineaEditable);
     ?>
+
+    <!-- Formulario de EDITAR una Aerolinea-->
+
     <form method="POST" action="">
+    <input type="hidden" name="updateForm" value="Soy el update">
+    <input type="hidden" name="id" value="<?php echo $aerolineaEditable->getId() ?>">
+    
+    <label>Nombre Aerolinea</label>
+        <input type="text" name="nombre" value="<?php echo $aerolineaEditable->getNombre() ?>">
+
+        <label>Cantidad de Aviones</label>
+        <input type="text" name="cantAviones" value="<?php echo $aerolineaEditable->getCant_aviones() ?>">
+
+        <label>Tipo de Aerolinea</label>
+        <input type="text" name="tipoAerolinea" value="<?php echo $aerolineaEditable->getTipo_aerolinea() ?>">
+
+        <button type="submit">Editar Aerolinea</button>
+    </form>
+    <?php } else {?>
+
+    <!-- Formulario de CREACION de Aerolineas-->
+    
+    <form method="POST" action="">
+        
+        <input type="hidden" name="createForm" value="Soy el create">
+
         <label>Nombre Aerolinea</label>
         <input type="text" name="nombre">
 
@@ -68,35 +121,50 @@
             <option value="Carga">Carga</option>
         </select>
 
-        <button type="submit">Registrar Aerolinea</button>
+        <button type="submit" >Registrar Aerolinea</button>
     </form>
+        <?php }?>
     <main>
         <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
+                <thead>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Cantidad Aviones</th>
                     <th>Tipo Aerolinea</th>
                     <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php 
-            foreach($aerolineas as $aerolinea){
-                echo"
-                <tr>
-                <td>{$aerolinea->getId()}</td>
-                <td>{$aerolinea->getNombre()}</td>
-                <td>{$aerolinea->getCant_Aviones()}</td>
-                <td>{$aerolinea->getTipo_Aerolinea()}</td>
-                <td><a href='?edit={$aerolinea->getId()}'>Editar</a>
-                    <a href='?'>Eliminar</a>
-                </td>
-            </tr>";
-            }
-            ?>
-            </tbody>
+                </thead>
+                <tbody>
+                <?php foreach($aerolineas as $aerolinea){   
+                   echo " <tr>
+                        <td>{$aerolinea->getId()}</td>
+                        <td>{$aerolinea->getNombre()}</td>
+                        <td>{$aerolinea->getCant_aviones()}</td>
+                        <td>{$aerolinea->getTipo_aerolinea()}</td>
+                        <td>
+                        <a href='?edit={$aerolinea->getId()}' >Editar</a>
+                        <a href='?delete={$aerolinea->getId()}'>Eliminar</a>
+                        </td>
+                    </tr>";
+
+                } ?>
+
+                <?php /*
+                foreach($aerolineas as $aerolinea):?>
+                    <tr>
+                        <td><?php print "{$aerolinea->getNombre()}" ?></td>
+                        <td><?php echo "{$aerolinea->getCant_aviones()}" ?></td>
+                        <td><?php echo "{$aerolinea->getTipo_aerolinea()}" ?></td>
+                    </tr>
+                <?php endforeach ?>
+
+                <?php foreach($aerolineas as $aerolinea):
+                 echo" <tr>
+                        <td>{$aerolinea->getNombre()} </td>
+                        <td>{$aerolinea->getCant_aviones()} </td>
+                        <td>{$aerolinea->getTipo_aerolinea()}</td>
+                    </tr> ";
+                     endforeach */  ?>
+                </tbody>
         </table>
     </main>
 </body>

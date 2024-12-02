@@ -5,18 +5,22 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
-    const { register, handleSubmit, formState: {errors}} = useForm();
-    const navigate = useNavigate();
+    const [formData, setFormData] = useState({ username: '', password: '' });
 
-    const onSubmit = async (data) => {
-        try {
-            await createUserWithEmailAndPassword(auth,data.email,data.password);
-            navigate('/songs')
-        } catch (error){
-            console.error(error);
-            alert('Error al crear la cuenta')
-        }
-    };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.post('/auth/register', formData);
+      alert('Usuario registrado exitosamente');
+    } catch (error) {
+      alert('Error al registrar: ' + (error.response?.data || error.message));
+    }
+};
 
     return (
         <div className="min-h-screen flex items-center justify-center">
