@@ -44,5 +44,17 @@
       "Vue.js"
     ],
     "active": false
+  },
+  {
+    "id": 5,
+    "name": "OFFICE365",
+    "description": "Curso sobre uso de herramientas de office como excel, access, powerBI para la creacion de macors",
+    "technologies": [
+      "EXCEL",
+      "POWER BI",
+      "ACCESS",
+      "SAP"
+    ],
+    "active": true
   }
 ]

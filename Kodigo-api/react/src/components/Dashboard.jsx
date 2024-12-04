@@ -113,9 +113,10 @@ const Dashboard = () => {
           <br />
           <h3 className="text-center text-lg text-white">Gestión de Bootcamps</h3>
           <br />
+          <div className="flex items-center justify-center">
           <form
             onSubmit={handleSubmit}
-            className="bg-gray-800 p-4 rounded-lg text-white mb-4">
+            className="bg-gray-800 p-4 rounded-lg text-white mb-4 max-w-md mx-auto p-6 rounded-lg shadow-lg">
             <div className="mb-2">
               <label className="block">Nombre</label>
               <input
@@ -155,28 +156,32 @@ const Dashboard = () => {
               {editId ? "Actualizar" : "Crear"} Bootcamp
             </button>
           </form>
-
-          <table className="w-full text-white">
-            <thead>
+          </div>
+          <br /><br />
+          <div className="relative overflow-x-auto sm:rounded-lg ">
+          <div className="mx-auto container">      
+          <table class="w-full text-sm text-left rtl:text-right tabla-em text-black">
+              <thead className="text-xs uppercase bg-gray-600 text-white">
               <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tecnologías</th>
-                <th>Acciones</th>
+              <th scope="col" className="px-6 py-3 text-center">Nombre</th>
+              <th scope="col" className="px-6 py-3 text-center">Descripción</th>
+              <th scope="col" className="px-6 py-3 text-center">Tecnologías</th>
+              <th scope="col" className="px-6 py-3 text-center">Acciones</th>
               </tr>
             </thead>
             <tbody>
               {bootcamps.map((bootcamp) => (
-                <tr key={bootcamp.id}>
-                  <td>{bootcamp.name}</td>
-                  <td>{bootcamp.description}</td>
-                  <td>{bootcamp.technologies.join(", ")}</td>
-                  <td>
+                <tr key={bootcamp.id}  className="bg-white border-b hover:bg-gray-50">
+                    <td class="px-6 py-4 text-center">{bootcamp.name}</td>
+                    <td class="px-6 py-4 text-center">{bootcamp.description}</td>
+                    <td class="px-6 py-4 text-center">{bootcamp.technologies.join(", ")}</td>
+                    <td class="px-6 py-4 text-center">
                     <button
                       onClick={() => handleEdit(bootcamp)}
                       className="bg-yellow-500 px-3 py-1 rounded text-white">
                       Editar
                     </button>
+                    <br /><br />
                     <button
                       onClick={() => handleDelete(bootcamp.id)}
                       className="bg-red-500 px-3 py-1 rounded text-white ml-2">
@@ -187,6 +192,8 @@ const Dashboard = () => {
               ))}
             </tbody>
           </table>
+          </div>
+          </div>
         </>
       )}
     </div>
