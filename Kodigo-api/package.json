@@ -1,0 +1,19 @@
+{
+  "name": "kodigo-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jairo Vega Romero",
+  "license": "ISC",
+  "description": "API con desarrollada para la practica de metodos CRUD en Express, con JWT para seguridad y almacenamiento local en Json.",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

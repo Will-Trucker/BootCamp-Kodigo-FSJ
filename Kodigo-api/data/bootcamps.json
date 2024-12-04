@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Java Developer",
+    "description": "Aprende Java desde cero hasta un nivel avanzado, incluyendo el desarrollo de aplicaciones backend robustas.",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "MySQL"
+    ],
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Fullstack Jr",
+    "description": "Curso orientado a aprender desarrollo Fullstack con ReactJS, Laravel y MySQL.",
+    "technologies": [
+      "ReactJS",
+      "Laravel",
+      "MySQL"
+    ],
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Data Analytics",
+    "description": "Curso de análisis de datos con enfoque en Python, PowerBI y R para generar insights y visualización de datos.",
+    "technologies": [
+      "Python",
+      "PowerBI",
+      "R"
+    ],
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "Full Stack",
+    "description": "Full Stack Dev",
+    "technologies": [
+      "Laravel",
+      "React",
+      "Angular",
+      "Node.js",
+      "Vue.js"
+    ],
+    "active": false
+  }
+]
