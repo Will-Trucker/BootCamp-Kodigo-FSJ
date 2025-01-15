@@ -1,39 +1,62 @@
-import React,{useState} from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/config";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../firebase/config';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import 'flowbite'; // Importar Flowbite CSS
 
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-function LoginIn({onLogin}){
-    const [email,setEmail] = useState("");
-    const [password,setPassword] = useState("");
-    const [error,setError] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate('/formulario-citas'); // Redireccionar al formulario de citas
+    } catch (error) {
+      console.error('Error al iniciar sesión', error);
+    }
+  };
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth,email,password).then(() => {
-            onLogin(true);
-        }).catch((err) => {
-            setError("Credenciales Invalidas");
-        });
-    };
-
-    return(
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-80">
-                <h2 className="text-2xl font-bold mb-4 text-center">Inicio de Sesion</h2>
-                <div className="mb-4">
-                    <label className="block text text-gray-700">Correo Electronico</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full p-2 border rounded" required/>
-                </div>
-                <div className="mb-4">
-                    <label className="block text text-gray-700">Clave</label>
-                    <input type="password" value={password} onChange={(e) => setEmail(e.target.value)} className="w-full p-2 border rounded" required/>
-                </div>
-                {error && <p className="text-red-500 text-sm">{error}</p>}
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">Ingresar</button>
-            </form>
-        </div>
-    )
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Iniciar Sesión</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700">Correo Electrónico</label>
+            <input 
+              type="email" 
+              id="email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              placeholder="correo@example.com" 
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+              required 
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-gray-700">Contraseña</label>
+            <input 
+              type="password" 
+              id="password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              placeholder="Contraseña" 
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+              required 
+            />
+          </div>
+          <button 
+            type="submit" 
+            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default LoginIn;
+export default Login;
